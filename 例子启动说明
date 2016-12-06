@@ -1,0 +1,9 @@
+例子是使用配置的方式分片和启动集群，3个server实例属于同1个分片，启动时会有一些报错，这些错误是重连失败的报错，全部启动后就没有报错了
+
+magic-server:
+启动类: com.magic.bitcask.server.Main0   com.magic.bitcask.server.Main1   com.magic.bitcask.server.Main2
+启动参数: -DconfPath=/xxx/magic-database/magic-bitcask/conf -Djava.net.preferIPv4Stack=true
+
+magic-client:
+启动类: com.magic.client.test.Main
+启动参数: -DconfPath=/xxx/magic-database/magic-client/conf
